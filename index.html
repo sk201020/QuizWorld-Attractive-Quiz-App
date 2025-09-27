@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>QuizWorld — Attractive Quiz App</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fixed top navigation -->
+<div class="fixed-nav">
+  <button id="btnHome">Home</button>
+  <button id="btnMenu">Menu</button>
+</div>
+
+<canvas id="confettiCanvas"></canvas>
+<div class="container">
+
+    <!-- Welcome Page -->
+  <div id="welcome" class="card show">
+    <div class="title">Welcome to QuizWorld</div>
+    <div class="subtitle">Fun • Fast • Responsive • Learn & Win</div>
+    <div style="text-align:center"><button id="startBtn" class="btn primary">Start Quiz</button></div>
+  </div>
+
+    <!-- Language Selection -->
+<div id="languagePage" class="card">
+  <div class="title">Choose Your Language</div>
+  <div class="flex-grid show" id="languageOptions">
+    <button data-lang="HTML">HTML</button>
+    <button data-lang="CSS">CSS</button>
+    <button data-lang="JavaScript">JavaScript</button>
+    <button data-lang="Java">Java</button>
+    <button data-lang="Python">Python</button>
+    <button data-lang="SQL">SQL</button>
+  </div>
+</div>
+
+  <!-- Quiz Page -->
+<div id="quizPage" class="card">
+    <div class="title" id="quizTitle">QuizWorld</div>
+    <div style="text-align:right"><span id="qNum">1</span> / <span id="qTotal">5</span></div>
+    <div class="question-area" id="questionArea">
+      <div class="question" id="questionText"></div>
+      <div class="options" id="options"></div>
+      <div class="controls">
+        <div class="timer" id="timer">00:15</div>
+        <div>
+          <button id="btnSkip" class="btn ghost">Skip</button>
+          <button id="btnNext" class="btn primary" disabled>Next</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <!-- Result Page -->
+<div id="resultPage" class="card">
+    <div class="title">Result</div>
+    <div class="result">
+      <div class="score" id="finalScore">0/5</div>
+      <div class="quote" id="finalMessage"></div>
+      <div style="margin-top:12px;text-align:center;">
+        <button id="btnRestart" class="btn primary">Retry</button>
+        <button id="btnReview" class="btn ghost">Review Answers</button>
+      </div>
+    </div>
+</div>
+</div>
+
+<audio id="applause" src="https://www.soundjay.com/human/applause-8.mp3" preload="auto"></audio>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
